@@ -1,0 +1,10 @@
+{
+    "extends": "react-app",
+    "rules": {
+        "react-hooks/exhaustive-deps": "off",
+        "comma-dangle": ["error", "never"],
+        "semi-style": ["error", "last"],
+        "semi": ["error", "always"],
+        "quotes": ["error", "single"]
+    }
+}
