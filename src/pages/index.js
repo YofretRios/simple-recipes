@@ -1,11 +1,11 @@
 import React from 'react';
-import NavBar from '../components/shared/NavBar';
+import Layout from '../components/shared/Layout';
 
 const index = () => {
   return (
-    <div>
-      <NavBar />
-    </div>
+    <Layout>
+      <h1>Home Page</h1>
+    </Layout>
   );
 };
 
