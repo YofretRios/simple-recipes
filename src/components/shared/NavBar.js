@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { FiAlignJustify } from 'react-icons/fi';
 
 import logo from '../../assets/images/logo.svg';
 
 const NavBar = () => {
+  const [show, setShow] = useState();
+
+  const toggleLinks = () => {
+    setShow(!show);
+  };
+
   return (
     <nav className="navbar">
       <div className="nav-center">
@@ -13,12 +19,12 @@ const NavBar = () => {
             <img src={logo} alt="" />
           </Link>
 
-          <button className="nav-btn">
+          <button className="nav-btn" onClick={toggleLinks}>
             <FiAlignJustify/>
           </button>
         </div>
 
-        <div className="nav-links show-links">
+        <div className={show ? 'nav-links show-links' : 'nav-links'}>
           <Link to="/" className="nav-link" activeClassName="active-link">Home</Link>
           <Link to="/recipes" className="nav-link" activeClassName="active-link">Recipes</Link>
           <Link to="/tags" className="nav-link" activeClassName="active-link">Tags</Link>
