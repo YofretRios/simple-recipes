@@ -1,10 +1,13 @@
 import React from 'react';
+import Layout from '../components/shared/Layout';
 
 const about = () => {
   return (
-    <h1>
-      About Page
-    </h1>
+    <Layout>
+      <h1>
+        About Page
+      </h1>
+    </Layout>
   );
 };
 

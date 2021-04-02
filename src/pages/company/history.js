@@ -1,14 +1,13 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import Layout from '../../components/shared/Layout';
 
 const history = () => {
   return (
-    <div>
+    <Layout>
       <h1>
         Company
       </h1>
-      <Link to="/">Home</Link>
-    </div>
+    </Layout>
   );
 };
 
