@@ -2,7 +2,8 @@ import React from 'react';
 import NavBar from './NavBar';
 import Footer from './Footer';
 
-import './Layout';
+import 'normalize.css';
+import '../../styles/main.scss';
 
 const Layout = ({ children }) => {
   return (
