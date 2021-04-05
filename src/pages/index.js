@@ -1,13 +1,20 @@
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/shared/Layout';
 import * as styles from '../styles/home.module.scss';
 
-const index = () => {
+const Index = () => {
   return (
     <Layout>
-      <h1 className={styles.text}>Home Page</h1>
+      <StaticImage
+        src="../assets/images/recipes/recipe-1.jpeg"
+        alt="test image"
+        className={styles.staticImg}
+        height={400}
+        placeholder="tracedSVG"
+      />
     </Layout>
   );
 };
 
-export default index;
+export default Index;
