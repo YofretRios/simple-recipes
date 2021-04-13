@@ -1,6 +1,7 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/shared/Layout';
+import Gallery from '../components/shared/Gallery.js';
 
 const Index = () => {
   return (
@@ -22,6 +23,8 @@ const Index = () => {
             </div>
           </div>
         </header>
+
+        <Gallery />
       </main>
     </Layout>
   );
