@@ -22,18 +22,21 @@ export const query = graphql`
 
 const Gallery = () => {
   const data = useStaticQuery(query);
-
   const nodes = data.allFile.nodes;
 
   return (
     <div>
       <section>
-        {nodes.map((image, index) => (
-          <article key={index}>
-            <p>{image.name}</p>
-            <GatsbyImage image={image.childImageSharp.gatsbyImageData} alt="Gallery Image" />
-          </article>
-        ))}
+        {nodes.map((image, index) => {
+          const path = getImage(image);
+
+          return (
+            <article key={index}>
+              <p>{image.name}</p>
+              <GatsbyImage image={path} alt="Gallery Image" />
+            </article>
+          );
+        })}
       </section>
     </div>
   );
