@@ -1,11 +1,13 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/shared/Layout';
-import Recipes from '../components/shared/AllRecipes';
+import AllRecipes from '../components/shared/AllRecipes';
+import SEO from '../components/shared/SEO';
 
 const Index = () => {
   return (
     <Layout>
+      <SEO title="Home" description="This is the main page" />
       <main className="page">
         <header className="hero">
           <StaticImage
@@ -24,7 +26,7 @@ const Index = () => {
           </div>
         </header>
 
-        <Recipes />
+        <AllRecipes />
       </main>
     </Layout>
   );

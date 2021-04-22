@@ -2,10 +2,12 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/shared/Layout';
 import RecipesList from '../components/shared/RecipesList';
+import SEO from '../components/shared/SEO';
 
 const Contact = ({ data }) => {
   return (
     <Layout>
+      <SEO title="Contact" />
       <main className="page">
         <section className="contact-page">
           <article>

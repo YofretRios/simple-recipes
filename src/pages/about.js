@@ -3,10 +3,12 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/shared/Layout';
 import RecipesList from '../components/shared/RecipesList';
+import SEO from '../components/shared/SEO';
 
 const About = ({ data }) => {
   return (
     <Layout>
+      <SEO title="About" />
       <main className="page">
         <section className="about-page">
           <article>
