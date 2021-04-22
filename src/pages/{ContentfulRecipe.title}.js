@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import {BsClockHistory, BsClock, BsPeople} from 'react-icons/bs';
+import slugify from 'slugify';
 import Layout from '../components/shared/Layout';
 
 const RecipeTemplate = ({ data: { contentfulRecipe } }) => {
@@ -54,8 +55,10 @@ const RecipeTemplate = ({ data: { contentfulRecipe } }) => {
 
               <p className="recipe-tags">
                 Tag: {tags.map((tag, index) => {
+                  const slug = slugify(tag, { lower: true });
+
                   return (
-                    <Link key={index} to={`/${tag}`}>{tag}</Link>
+                    <Link key={index} to={`/tags/${slug}`}>{tag}</Link>
                   );
                 })}
               </p>
