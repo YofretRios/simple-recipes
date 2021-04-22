@@ -1,10 +1,15 @@
 import React from 'react';
 import Layout from '../components/shared/Layout';
+import AllRecipes from '../components/shared/AllRecipes';
 
 const Recepies = () => {
   return (
     <Layout>
-      <h1>Recepies</h1>
+      <main className="page">
+        <h1>All Recepies</h1>
+
+        <AllRecipes />
+      </main>
     </Layout>
   );
 };

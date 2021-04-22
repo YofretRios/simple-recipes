@@ -1,7 +1,7 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/shared/Layout';
-import Gallery from '../components/shared/Gallery.js';
+import Recipes from '../components/shared/AllRecipes';
 
 const Index = () => {
   return (
@@ -24,7 +24,7 @@ const Index = () => {
           </div>
         </header>
 
-        <Gallery />
+        <Recipes />
       </main>
     </Layout>
   );
