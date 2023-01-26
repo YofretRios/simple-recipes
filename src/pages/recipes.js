@@ -16,8 +16,6 @@ const Recepies = () => {
       <SEO title="Recepies" />
       <main className="page">
         <h1>All Recepies</h1>
-        {isFetching && <h1>Loading list...</h1>}
-        {data && JSON.stringify(data)}
 
         <AllRecipes />
       </main>
