@@ -4,7 +4,7 @@ import Layout from '../components/shared/Layout';
 import AllRecipes from '../components/shared/AllRecipes';
 import SEO from '../components/shared/SEO';
 
-const Recepies = () => {
+const Recipes = () => {
   const { isFetching, data } = useQuery('breeds', async () => {
     const breeds = await fetch('https://dog.ceo/api/breeds/list/all');
 
@@ -13,9 +13,9 @@ const Recepies = () => {
 
   return (
     <Layout>
-      <SEO title="Recepies" />
+      <SEO title="Recipes" />
       <main className="page">
-        <h1>All Recepies</h1>
+        <h1>All Recipes</h1>
 
         <AllRecipes />
       </main>
@@ -23,4 +23,4 @@ const Recepies = () => {
   );
 };
 
-export default Recepies;
+export default Recipes;
